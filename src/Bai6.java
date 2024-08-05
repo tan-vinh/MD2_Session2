@@ -4,24 +4,15 @@ public class Bai6 {
         int i = 2;
 
         while (count < 20) {
-            if (i == 2) {
-                System.out.print(i + " ");
-                count ++;
-            } else if (i == 3) {
-                System.out.print(i + " ");
-                count ++;
-            } else if (i == 5) {
-                System.out.print(i + " ");
-                count ++;
-            } else if (i == 7) {
-                System.out.print(i + " ");
-                count ++;
-            } else if (i % 2 == 0) {
-                count = count + 0;
-            }else if (i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
-                count = count + 0;
-            }else {
-                System.out.print(i + " ");
+            boolean soNguyenTo = true;
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    soNguyenTo = false;
+                    break;
+                }
+            }
+            if (soNguyenTo) {
+                System.out.println(i + " ");
                 count ++;
             }
             i ++;
