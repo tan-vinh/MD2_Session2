@@ -28,18 +28,15 @@ public class Bai7 {
                 case 2:
                     System.out.print("Nhập số để kiểm tra số nguyên tố: ");
                     int n1 = sc.nextInt();
-                    if (n1 == 2) {
-                        System.out.println(n1 + " là số nguyên tố.");
-                    } else if (n1 == 3) {
-                        System.out.println(n1 + " là số nguyên tố.");
-                    } else if (n1 == 5) {
-                        System.out.println(n1 + " là số nguyên tố.");
-                    } else if (n1 == 7) {
-                        System.out.println(n1 + " là số nguyên tố.");
-                    } else if (n1 % 2 == 0) {
-                        System.out.println(n1 + " không phải là số nguyên tố.");
-                    }else if (n1 % 3 != 0 && n1 % 5 != 0 && n1 % 7 != 0) {
-                            System.out.println(n1 + " là số nguyên tố.");
+                    boolean soNguyenTo = true;
+                    for (int j = 2; j <= Math.sqrt(n1); j++) {
+                        if (n1 % j == 0) {
+                            soNguyenTo = false;
+                            break;
+                        }
+                    }
+                    if (soNguyenTo) {
+                        System.out.println(n1 + " là số Nguyên tố");
                     }
                     break;
                 case 3:
