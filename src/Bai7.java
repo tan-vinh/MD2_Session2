@@ -28,6 +28,10 @@ public class Bai7 {
                 case 2:
                     System.out.print("Nhập số để kiểm tra số nguyên tố: ");
                     int n1 = sc.nextInt();
+                    if (n1 == 1){
+                        System.out.println(n1 + " không phải là số Nguyên tố");
+                        break;
+                    }
                     boolean soNguyenTo = true;
                     for (int j = 2; j <= Math.sqrt(n1); j++) {
                         if (n1 % j == 0) {
@@ -37,6 +41,8 @@ public class Bai7 {
                     }
                     if (soNguyenTo) {
                         System.out.println(n1 + " là số Nguyên tố");
+                    }else {
+                        System.out.println(n1 + " không phải là số Nguyên tố");
                     }
                     break;
                 case 3:
